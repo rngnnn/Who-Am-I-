@@ -127,3 +127,130 @@ h1,h2,h3,h4,h5,h6{
     margin-block-start: 14px;
     margin-inline: auto;
 }
+
+.button{
+
+padding: 14px 35px;    
+background-color: #004d41;
+color: #fff;
+border-radius: 50px;
+font-size: 18px;
+font-weight: 500;
+transition: 1s ease-in-out;
+
+
+}
+.button:hover{
+    background-color: #fff;
+
+}
+
+
+
+.header{
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: #004d41;
+    padding-block: 15px;
+    width: 100%;
+    z-index: 10;
+
+}
+
+.header .container{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.nav_toggle{
+    width: 30px;
+    height: 30px;
+    transition-duration: 0.5s;
+
+}
+
+.icon_menu{
+
+    transition-duration: 0.5s;
+    height: 2px;
+    width: 30px;
+    background-color: #fff;
+    position: relative;
+    
+    text-align: left;
+}
+
+.icon_menu::before{
+
+    content: "";
+    transition-duration: 0.5sn;
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    top: 10px;
+    background-color: #fff;
+}
+
+.icon_menu::after{
+
+    content: "";
+    transition-duration: 0.5sn;
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    top:-10px;
+    background-color: #fff;
+}
+
+.nav_toggle.active .icon_menu{
+    transition: 0.5s;
+    background: transparent;
+
+
+}
+
+.nav_toggle.active .icon_menu::before{
+
+    transform: rotateZ(45deg) scaleX(1.25) translate(-5px,-5px);
+
+}
+
+.nav_toggle.active .icon_menu::after{
+
+    transform: rotateZ(-45deg) scaleX(1.25) translate(-7px,7px);
+    
+}
+
+.logo{
+    color: #fff;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.nav_menu{
+    position: fixed;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 100;
+    display: grid;
+    place-content: center;
+    background-color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: all.5ns cubic-bezier(0.9,0.3,0.69,0.22);
+
+
+}
+.show_menu{
+    top: 68px;
+    visibility: visible;
+    opacity: 1;
+    transition: all.5ns cubic-bezier(0.9,0.3,0.69,0.22);
+}
