@@ -1,0 +1,129 @@
+
+@import url(
+    'https://fonts.googleapis.com/css?family=Exo+2:wght@300;400;500;600;700;800&family=Exo:wght@200;300;400;500;600;700;800&display=swap'
+);
+
+*,
+*::before,
+*::after{
+
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+
+}
+
+img{
+max-width: 100%;
+height: auto;
+
+
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+li{
+    list-style: none;
+}
+
+a,span,button,input,image,i{
+    display: block;
+}
+
+
+button,
+input{
+border: none;
+background: none;
+outline: none;
+font: inherit;
+
+}
+
+button,i{
+    cursor: pointer;
+    
+}
+
+input{
+    width:100%;
+}
+
+html{
+    scroll-behavior: smooth;
+    font-family: "Exo",sans-serif;
+    font-size: 10px;
+}
+
+body{
+color:#243238 ;
+line-height: 1.5;
+font-size: 1.5rem;
+font-weight: 500;
+
+}
+
+
+/*Use again*/
+.container{
+    padding-inline: 16px;
+
+}
+
+.section{
+    padding-block: 125px 87px;
+
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: "Exo 2",sans-serif;
+    font-style: normal;
+    line-height: 1.2;
+    margin-bottom: 5px;
+
+}
+
+.grid{
+
+    display: grid;
+    gap: 15px;
+
+
+}
+
+.img-cover{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+.img-folder{
+    aspect-ratio: var(--widht)/var(--height);
+    background-color: #aeaeae;
+    overflow: hidden;
+}
+
+.section-title{
+    font-size: 21px;
+    line-height: 30px;
+    color:#fff;
+    text-align:center;
+
+
+}
+
+.title-wrapper{
+    margin-block-end: 20px;
+
+
+
+}
+
+.title-shape{
+
+    margin-block-start: 14px;
+    margin-inline: auto;
+}
