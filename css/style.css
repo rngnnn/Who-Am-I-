@@ -298,5 +298,44 @@ transition: 1s ease-in-out;
 
 .typed-text{
   width: 300px;
-  
+  overflow: hidden;
+
+}
+
+.profession_text{
+    font-family: "Exo 2",sans-serif;
+    font-size: 30px;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin-bottom: 5px;
+    font-weight: 700;
+    position: relative;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-color: #fff;
+    -webkit-text-stroke-width: 1px;
+    white-space: nowrap;
+}
+
+.typed-cursor{
+display: none;
+}
+
+.skills_list{
+    display: flex;
+    row-gap: 15px;
+    column-gap: 30px;
+    flex-wrap: wrap;
+}
+
+.skills_list li{
+
+    list-style: disc;
+    color:#fff;
+    margin-inline-start: 15px;
+
+}
+
+.skills_list_span{
+    
 }

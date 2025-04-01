@@ -12,7 +12,7 @@ const navToggle = document.querySelector(".nav_toggle"),
 
 
     // TYPING TEXT ANIMATION
-    var typed = new Typed(".typing", {
+    var typed = new Typed(".profession_text", {
         strings: ["Web Developer", "Designer", "Freelancer"],
         typeSpeed: 100,
         backSpeed: 60,
