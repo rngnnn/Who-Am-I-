@@ -726,3 +726,273 @@ border-radius: 20px;
     border-radius: 50%; /* Yuvarlak şekil */
     margin-right: 10px; /* Metin ile yuvarlak arasına boşluk ekle */
 }
+
+
+.work_item, .service_item, .testimonial_item, .partners img, .statistics, .contact_form, .blog_item {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.title_wraper {
+    text-align: center; /* Başlık ve görseli ortala */
+    margin-bottom: 30px; /* Alt boşluk ekle */
+}
+
+.section_title {
+    font-size: 36px; /* Başlık boyutu */
+    font-weight: bold;
+    color: #b9b9b9; /* Başlık rengi */
+    margin-bottom: 20px; /* Başlık ile görsel arasına boşluk ekle */
+    text-transform: uppercase; /* Büyük harf yap */
+    letter-spacing: 2px; /* Harfler arası boşluk */
+}
+
+.title-shape {
+    width: 100%; /* Görselin genişliğini kapsayıcıya göre ayarla */
+    max-width: 1900px; /* Maksimum genişliği belirle */
+    aspect-ratio: 4 / 1; /* En-boy oranını ayarla */
+    object-fit: cover; /* Görseli kapsayıcıya sığdır */
+    margin: 0 auto; /* Ortalamak için */
+    display: block; /* Görseli blok seviyesinde göster */
+    border-radius: 15px; /* Köşeleri yuvarlat */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+}
+
+
+
+.custom-button {
+    background-color: #4a90e2; /* Özel arka plan rengi */
+    color: #fff; /* Yazı rengi */
+    border-radius: 25px; /* Köşeleri yuvarlat */
+    padding: 10px 20px; /* İç boşluk */
+    font-size: 16px; /* Yazı boyutu */
+    font-weight: bold;
+    text-decoration: none; /* Alt çizgiyi kaldır */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Hover efekti */
+}
+
+.custom-button:hover {
+    background-color: #357ab8; /* Hover durumunda arka plan rengi */
+    transform: scale(1.05); /* Hover durumunda büyüt */
+}
+
+
+.project-image {
+    width: 100%; /* Görselin genişliğini kapsayıcıya göre ayarla */
+    max-width: 800px; /* Maksimum genişliği daralt */
+    height: auto; /* Yüksekliği otomatik ayarla */
+    aspect-ratio: 16 / 9; /* Görselin en-boy oranını ayarla */
+    object-fit: cover; /* Görseli kapsayıcıya sığdır */
+    border-radius: 15px; /* Köşeleri yuvarlat */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hafif gölge efekti */
+    margin: 20px auto; /* Üst ve alt boşluk ekle, ortala */
+    display: block; /* Görseli blok seviyesinde göster */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    filter: grayscale(100%); /* Görseli siyah-beyaz yap */
+
+    
+}
+
+.project-image:hover {
+    transform: scale(1.1); /* Hover durumunda görseli büyüt */
+    filter: grayscale(0); /* Görseli siyah-beyaz yap */
+
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Hover durumunda gölgeyi artır */
+}
+
+.card_title {
+    font-size: 24px; /* Başlık boyutunu artır */
+    font-weight: bold; /* Kalın yazı */
+    color: #333; /* Başlık rengi */
+    margin-bottom: 10px; /* Alt boşluk */
+    text-align: center; /* Metni ortala */
+}
+
+.card_desc {
+    font-size: 16px; /* Açıklama metni boyutu */
+    color: #555; /* Açıklama metni rengi */
+    line-height: 1.6; /* Satır yüksekliği */
+    margin-bottom: 20px; /* Alt boşluk */
+    text-align: center; /* Metni ortala */
+}
+
+.custom-button {
+    display: inline-block; /* Butonu satır içi blok yap */
+    padding: 10px 20px; /* İç boşluk */
+    background-color: #393e44; /* Buton arka plan rengi */
+    color: #dddada; /* Yazı rengi */
+    border-radius: 25px; /* Köşeleri yuvarlat */
+    text-decoration: none; /* Alt çizgiyi kaldır */
+    font-size: 16px; /* Yazı boyutu */
+    font-weight: bold; /* Kalın yazı */
+    text-align: center; /* Metni ortala */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Hover efekti */
+    margin: 0 auto; /* Ortalamak için */
+}
+
+.custom-button:hover {
+    background-color: #212d37; /* Hover durumunda arka plan rengi */
+    transform: scale(1.05); /* Hover durumunda büyüt */
+}
+
+
+
+.testimonial_item {
+    background-color: #f9f9f9; /* Arka plan rengi */
+    border-radius: 15px; /* Köşeleri yuvarlat */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
+    padding: 20px; /* İçerik için boşluk */
+    margin: 20px auto; /* Üst ve alt boşluk ekle, ortala */
+    max-width: 800px; /* Maksimum genişlik */
+    text-align: center; /* Metni ortala */
+}
+
+.testimonial_desc {
+    font-size: 18px; /* Açıklama metni boyutu */
+    font-style: italic; /* Yazıyı italik yap */
+    color: #555; /* Açıklama metni rengi */
+    margin-bottom: 15px; /* Alt boşluk */
+    line-height: 1.6; /* Satır yüksekliği */
+}
+
+.testimonial_author {
+    font-size: 16px; /* Yazar adı boyutu */
+    font-weight: bold; /* Kalın yazı */
+    color: #333; /* Yazar adı rengi */
+    margin-top: 10px; /* Üst boşluk */
+}
+
+
+
+
+/* Partners */
+
+.partners {
+    display: flex; /* Logoları yan yana hizala */
+    justify-content: center; /* Logoları yatayda ortala */
+    align-items: center; /* Logoları dikeyde ortala */
+    gap: 30px; /* Logolar arasında boşluk bırak */
+    margin: 40px 20px; /* Üst ve alt boşluk ekle */
+    flex-wrap: wrap; /* Küçük ekranlarda logoların alt alta geçmesini sağla */
+    background-color: #9f9f9f; /* Arka plan rengini açık gri yap */
+    padding: 15px 15px; /* İçerik için boşluk ekle */
+    border-radius: 15px; /* Köşeleri yuvarlat */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */}
+
+.partners img {
+    max-width: 200px; /* Logoların maksimum genişliğini ayarla */
+    height: 200px; /* Yüksekliği otomatik ayarla */
+    object-fit: contain; /* Görsellerin orantılı şekilde sığmasını sağla */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover efekti için geçiş */
+    border-radius: 100%; /* Köşeleri hafif yuvarlat */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
+}
+
+.partners img:hover {
+    transform: scale(1.1); /* Hover durumunda logoyu büyüt */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Hover durumunda gölgeyi artır */
+}
+
+
+.statistics {
+    display: flex; /* Stat item'ları yan yana hizala */
+    justify-content: center; /* Stat item'ları yatayda ortala */
+    align-items: center; /* Stat item'ları dikeyde ortala */
+    gap: 30px; /* Stat item'lar arasında boşluk bırak */
+    margin: 40px 0; /* Üst ve alt boşluk ekle */
+    padding: 20px; /* İçerik için boşluk ekle */
+    background-color: #f9f9f9; /* Arka plan rengini açık gri yap */
+    border-radius: 15px; /* Köşeleri yuvarlat */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
+}
+
+.stat_item {
+    text-align: center; /* Metni ortala */
+    padding: 10px; /* İçerik için boşluk ekle */
+}
+
+.stat_number {
+    font-size: 36px; /* Sayı boyutunu artır */
+    font-weight: bold; /* Kalın yazı */
+    color: #4a90e2; /* Sayı rengi */
+    margin-bottom: 10px; /* Alt boşluk */
+}
+
+.stat_desc {
+    font-size: 16px; /* Açıklama metni boyutu */
+    color: #555; /* Açıklama metni rengi */
+    line-height: 1.4; /* Satır yüksekliği */
+}
+
+
+
+
+
+.contact_form {
+    background: linear-gradient(135deg, #34393f, #97a3ae); /* Modern degrade arka plan */
+    padding: 40px; /* İçerik için boşluk */
+    border-radius: 20px; /* Köşeleri yuvarlat */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Hafif gölge efekti */
+    max-width: 6000px; /* Maksimum genişlik */
+    margin: 50px auto; /* Ortalamak için üst-alt ve yan boşluk */
+    text-align: center; /* Metni ortala */
+    color: #fff; /* Yazı rengini beyaz yap */
+}
+
+.contact_title {
+    font-size: 32px; /* Başlık boyutu */
+    font-weight: bold; /* Kalın yazı */
+    margin-bottom: 10px; /* Alt boşluk */
+    text-transform: uppercase; /* Büyük harf yap */
+    letter-spacing: 2px; /* Harfler arası boşluk */
+}
+
+.contact_subtitle {
+    font-size: 16px; /* Alt başlık boyutu */
+    margin-bottom: 30px; /* Alt boşluk */
+    color: #e0e0e0; /* Daha açık bir yazı rengi */
+}
+
+.form_input, .form_textarea {
+    width: 100%; /* Genişliği kapsayıcıya göre ayarla */
+    padding: 15px; /* İçerik için boşluk */
+    margin-bottom: 20px; /* Alt boşluk */
+    border: none; /* Kenarlık kaldır */
+    border-radius: 10px; /* Köşeleri yuvarlat */
+    font-size: 16px; /* Yazı boyutu */
+    color: #333; /* Yazı rengi */
+    background-color: #fff; /* Arka plan rengi */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Geçiş efekti */
+}
+
+.form_input:focus, .form_textarea:focus {
+    box-shadow: 0 0 10px rgba(74, 144, 226, 0.5); /* Odaklanıldığında gölge efekti */
+    transform: scale(1.02); /* Odaklanıldığında hafif büyüt */
+    outline: none; /* Varsayılan odak çizgisini kaldır */
+}
+
+.form_textarea {
+    height: 150px; /* Textarea yüksekliği */
+    resize: none; /* Yeniden boyutlandırmayı devre dışı bırak */
+}
+
+.form_button {
+    background-color: #d5d5d5; /* Buton arka plan rengi */
+    color: #4d555f; /* Yazı rengi */
+    padding: 15px 30px; /* İçerik için boşluk */
+    border: none; /* Kenarlık kaldır */
+    border-radius: 25px; /* Köşeleri yuvarlat */
+    font-size: 16px; /* Yazı boyutu */
+    font-weight: bold; /* Kalın yazı */
+    cursor: pointer; /* İmleç değişimi */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Geçiş efekti */
+}
+
+.form_button:hover {
+    background-color: #e0e0e0; /* Hover durumunda arka plan rengi */
+    transform: scale(1.1); /* Hover durumunda büyüt */
+    color: #357ab8; /* Hover durumunda yazı rengi */
+}
