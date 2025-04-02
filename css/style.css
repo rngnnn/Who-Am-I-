@@ -614,16 +614,44 @@ border-radius: 20px;
 
 /* Key Skills ve Info Wrapper için Yaratıcı Stil */
 
-.skills_list {
-    font-size: 1px; /* Yazı boyutunu küçült */
-    color: #333; /* Yazı rengini koyu yap */
-    line-height: 1.6; /* Satır yüksekliğini artır */
+.skills-list {
+    font-size: 14px; /* Yazı boyutunu küçült */
+    color: #f0e7e7; /* Yazı rengini koyu yap */
+    line-height: 1.6; /* Satır yüksekliği */
     margin-top: 10px; /* Listenin üst kısmına boşluk ekle */
     padding-left: 20px; /* Liste işaretleri için boşluk */
 }
 
-.skills_list li {
+.skills-list li {
     margin-bottom: 5px; /* Liste elemanları arasına boşluk ekle */
+}
+
+
+
+
+.progress-bar {
+    background-color: #a3a3a3; /* Arka plan rengi */
+    border-radius: 10px;
+    height: 10px;
+    width: 100%; /* Çubuğun genişliği */
+    margin-top: 5px; /* Üst boşluk */
+    overflow: hidden; /* Taşan içeriği gizle */
+}
+
+.progress {
+    background-color: #25303c; /* İlerleme çubuğu rengi */
+    height: 100%; /* Çubuğun yüksekliği */
+    border-radius: 10px;
+    transition: width 0.3s ease; /* Animasyon efekti */
+}
+
+.skills-list li {
+    margin-bottom: 15px; /* Liste elemanları arasına boşluk ekle */
+    font-size: 14px; /* Yazı boyutunu küçült */
+    color: #e0e0e0; /* Yazı rengi */
+    line-height: 1.6; /* Satır yüksekliği */
+    display: flex;
+    flex-direction: column; /* Dikey hizalama */
 }
 
 
@@ -669,4 +697,32 @@ border-radius: 20px;
 }
 .skills_list li {
     margin-bottom: 5px; /* Liste elemanları arasına boşluk ekle */
+}
+
+
+
+.interests-list {
+    list-style: none; /* Varsayılan liste işaretlerini kaldır */
+    padding: 0; /* İç boşluğu kaldır */
+    margin: 0; /* Dış boşluğu kaldır */
+    display: flex; /* Flexbox kullan */
+    flex-direction: column; /* Öğeleri aşağıdan yukarıya sıralamak için ters yön */
+    gap: 10px; /* Öğeler arasına boşluk ekle */
+}
+
+.interests-list li {
+    display: flex; /* İkon ve metni yan yana hizala */
+    align-items: center; 
+    font-size: 14px; /* Yazı boyutunu ayarla */
+    color: #e0e0e0; /* Yazı rengini ayarla */
+}
+
+.interests-list .circle {
+    flex-shrink: 0; /* Yuvarlağın boyutunun metne göre küçülmesini engelle */
+
+    width: 10px; /* Yuvarlağın genişliği */
+    height: 10px; /* Yuvarlağın yüksekliği */
+    background-color: #9d9d9d; /* Yuvarlağın rengi */
+    border-radius: 50%; /* Yuvarlak şekil */
+    margin-right: 10px; /* Metin ile yuvarlak arasına boşluk ekle */
 }
