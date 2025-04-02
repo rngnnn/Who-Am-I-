@@ -59,7 +59,7 @@ html{
 }
 
 body{
-color:#243238 ;
+color:#97a9c0 ;
 line-height: 1.5;
 font-size: 1.5rem;
 font-weight: 500;
@@ -102,7 +102,7 @@ h1,h2,h3,h4,h5,h6{
 }
 .img-folder{
     aspect-ratio: var(--widht)/var(--height);
-    background-color: #aeaeae;
+    background-color:#1C2321;
     overflow: hidden;
 }
 
@@ -131,8 +131,8 @@ h1,h2,h3,h4,h5,h6{
 .button{
 
 padding: 14px 35px;    
-background-color: #004d41;
-color: #fff;
+background-color: #1C2321;
+color: #EEF1EF;
 border-radius: 50px;
 font-size: 18px;
 font-weight: 500;
@@ -141,7 +141,7 @@ transition: 1s ease-in-out;
 
 }
 .button:hover{
-    background-color: #fff;
+    background-color: #EEF1EF;
 
 }
 
@@ -151,7 +151,7 @@ transition: 1s ease-in-out;
     position: relative;
     top: 0;
     left: 0;
-    background-color: #004d41;
+    background-color: #1C2321;
     padding-block: 15px;
     width: 100%;
     z-index: 10;
@@ -176,12 +176,12 @@ transition: 1s ease-in-out;
 .icon_menu{
 
     transition-duration: 0.5s;
-    height: 2px;
-    width: 30px;
-    background-color: #fff;
+    height: 3px;
+    width: 20px;
+    background-color:#7D98A1;
     position: relative;
     
-    text-align: left;
+    text-align: center;
 }
 
 .icon_menu::before{
@@ -189,10 +189,10 @@ transition: 1s ease-in-out;
     content: "";
     transition-duration: 0.5sn;
     position: absolute;
-    width: 30px;
-    height: 2px;
+    width: 20px;
+    height: 3px;
     top: 10px;
-    background-color: #fff;
+    background-color: #EEF1EF;
 }
 
 .icon_menu::after{
@@ -200,10 +200,10 @@ transition: 1s ease-in-out;
     content: "";
     transition-duration: 0.5sn;
     position: absolute;
-    width: 30px;
-    height: 2px;
+    width: 20px;
+    height: 3px;
     top:-10px;
-    background-color: #fff;
+    background-color: #A9B4C2;
 }
 
 .nav_toggle.active .icon_menu{
@@ -226,9 +226,11 @@ transition: 1s ease-in-out;
 }
 
 .logo{
-    color: #fff;
-    font-size: 25px;
-    font-weight: bolder;
+    color: #a5b8be;
+    font-size: 35px;
+    font-weight:bolder;
+    text-align: center;
+    margin: 0 auto;
 }
 
 .nav_menu{
@@ -446,3 +448,149 @@ font-weight: 700;
 }
 
 
+
+/* HAkkimda */
+
+.about{
+    background-color: #797070;
+    padding: 32px o 30px;
+}
+
+.about_content .bio{
+   color: #fff;
+   font-weight: 700;
+   font-size: 21px;
+   line-height: 30px;
+}
+.about_content h4{
+   margin-block-start:12px ;
+   font-size: 22px;
+    font-weight: 400;
+    color: #95d1c8;
+}
+
+
+
+.about_content .bio_desc{
+    margin-block: 21px 15px;
+    font-size: 16px;
+    color: #e0d1d1;
+    line-height: 1.8;
+}
+
+
+.about_info{
+    display: flex;
+flex-direction: column;
+gap: 38px;
+padding: 30px 20px 20px;
+background-color: blueviolet;
+border:2px solid #2c2c2c;
+border-radius: 20px;
+}
+
+
+.about_info .name,
+.about_info .span{
+    font-size: 20px;
+    font-weight: 400;
+    color: #240a0a;
+    font-style: 16px;
+}
+
+.about_buttons{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-block-start: 20px;
+}
+
+.about_buttons .button .download{
+    background-color:transparent;
+    color: #fff;
+    transition: all 0.3s ease;
+    
+}
+
+.about_buttons .button .download:hover{
+    background-color:#fff;
+    color: #2c2c2c; /* Yazı rengini koyu yap */
+    border: 1px solid #2c2c2c;
+}
+.about_buttons .button {
+    padding: 14px 35px;
+    background-color: #004d41; /* Varsayılan arka plan rengi */
+    color: #fff; /* Varsayılan yazı rengi */
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.5s ease;
+}
+
+.about_buttons .button:hover {
+    background-color: #fff; /* Hover durumunda arka plan beyaz */
+    color: #2c2c2c; /* Hover durumunda yazı rengini koyu yap */
+    border: 1px solid #2c2c2c; /* Kenarlık ekle */
+}
+
+/* Key Skills ve Info Wrapper için Yaratıcı Stil */
+.info_wrapper {
+    background: linear-gradient(135deg, #004d41, #007bff); /* Modern degrade arka plan */
+    border-radius: 15px; /* Daha yuvarlak köşeler */
+    padding: 20px; /* İç boşluk */
+    margin-bottom: 20px; /* Alt boşluk */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Daha belirgin gölge */
+    display: flex; /* İçeriği yatay hizala */
+    flex-direction: column; /* İçeriği dikey hizala */
+    gap: 10px; /* Elemanlar arasında boşluk */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover efekti için geçiş */
+}
+
+.info_wrapper:hover {
+    transform: translateY(-5px); /* Hover durumunda yukarı kaldır */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Hover durumunda gölgeyi artır */
+}
+
+.info_wrapper .name {
+    font-size: 22px; /* Başlık boyutu */
+    font-weight: bold; /* Kalın yazı */
+    color: #fff; /* Başlık rengi */
+    text-transform: uppercase; /* Büyük harf */
+    letter-spacing: 1px; /* Harfler arası boşluk */
+}
+
+.info_wrapper .span {
+    font-size: 18px; /* İçerik boyutu */
+    color: #e0e0e0; /* İçerik rengi */
+    font-weight: 400; /* Normal yazı */
+}
+
+/* Key Skills için Özel Stil */
+.skills_list {
+    display: grid; /* Grid düzeni */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Dinamik sütunlar */
+    gap: 15px; /* Elemanlar arasında boşluk */
+    margin-top: 15px; /* Üst boşluk */
+    padding: 10px; /* İç boşluk */
+    background-color: #f9f9f9; /* Arka plan rengi */
+    border-radius: 10px; /* Köşeleri yuvarlat */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+}
+
+.skills_list li {
+    list-style: none; /* Noktaları kaldır */
+    background: #004d41; /* Arka plan rengi */
+    color: #fff; /* Yazı rengi */
+    padding: 10px 15px; /* İç boşluk */
+    border-radius: 8px; /* Köşeleri yuvarlat */
+    font-size: 16px; /* Yazı boyutu */
+    font-weight: 500; /* Yazı kalınlığı */
+    text-align: center; /* Ortala */
+    transition: all 0.3s ease; /* Hover efekti için geçiş */
+}
+
+.skills_list li:hover {
+    background: #007bff; /* Hover durumunda arka plan rengi */
+    transform: scale(1.05); /* Hover durumunda büyüt */
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.2); /* Hover durumunda gölge */
+}
