@@ -996,3 +996,68 @@ border-radius: 20px;
     transform: scale(1.1); /* Hover durumunda büyüt */
     color: #357ab8; /* Hover durumunda yazı rengi */
 }
+
+
+/* Video galerisini ortalamak ve düzenlemek için */
+.video_gallery {
+    position: relative; /* Çizgileri konumlandırmak için gerekli */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 20px 0; /* Üst ve alt boşluğu daha da daralttık */
+}
+
+.video_gallery::before,
+.video_gallery::after {
+    content: ''; /* Pseudo-element içeriği */
+    position: absolute;
+    width: 100px; /* Çizgilerin genişliği */
+    height: 2px; /* Çizgilerin yüksekliği */
+    background-color: #ccc; /* Çizgilerin rengi */
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.video_gallery::before {
+    top: -20px; /* Videonun üst kısmına yerleştir */
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.video_gallery::after {
+    bottom: -20px; /* Alt kısmına yerleştir */
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+/* Yanlara çizgiler eklemek için */
+.video_gallery::before,
+.video_gallery::after {
+    display: flex;
+    justify-content: space-between;
+}
+
+.video_gallery::before span,
+.video_gallery::after span {
+    content: '';
+    width: 30px; /* Çizgi genişliği */
+    height: 2px; /* Çizgi yüksekliği */
+    background-color: #ccc; /* Çizgi rengi */
+    margin: 0 5px; /* Çizgiler arasındaki boşluk */
+}
+.video_gallery video {
+    max-width: 90%;
+    height: auto;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 2px 0; /* Video etrafındaki boşluk daha da az */
+    max-height: 400px; /* Videonun yüksekliğini sınırladık */
+    object-fit: cover; /* Gerekirse videoyu biraz keser ama estetik kalır */
+}
