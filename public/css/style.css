@@ -941,6 +941,10 @@ border-radius: 20px;
     color: #fff; /* Yazı rengini beyaz yap */
 }
 
+
+
+
+
 .contact_title {
     font-size: 32px; /* Başlık boyutu */
     font-weight: bold; /* Kalın yazı */
@@ -994,7 +998,7 @@ border-radius: 20px;
 .form_button:hover {
     background-color: #e0e0e0; /* Hover durumunda arka plan rengi */
     transform: scale(1.1); /* Hover durumunda büyüt */
-    color: #357ab8; /* Hover durumunda yazı rengi */
+    color: #f5f5f5; /* Hover durumunda yazı rengi */
 }
 
 
@@ -1060,4 +1064,106 @@ border-radius: 20px;
     margin: 2px 0; /* Video etrafındaki boşluk daha da az */
     max-height: 400px; /* Videonun yüksekliğini sınırladık */
     object-fit: cover; /* Gerekirse videoyu biraz keser ama estetik kalır */
+}
+
+.video_wrapper {
+    background-color: #77808a; /* Arka plan rengini buradan değiştirebilirsiniz */
+    padding: 40px 210px 40px 210px ; /* Videonun etrafında boşluk bırakır */
+    border-radius: 8px; /* Köşeleri yuvarlatır */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hafif bir gölge ekler */
+
+    display: flex; /* Esnek düzen */
+    justify-content: center; /* Videoyu yatayda ortala */
+    align-items: center; /* Videoyu dikeyde ortala */
+    max-width: 100%; /* Kapsayıcının genişliğini sınırla */
+
+}
+
+/* Sadece video galerisindeki videoları hedeflemek için */
+.video_gallery .video_wrapper video {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    min-width: 300px; /* Videonun minimum genişliği */
+    min-height: 200px; /* Videonun minimum yüksekliği */
+    max-height: 400px; /* Videonun maksimum yüksekliği */
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    object-fit: cover; /* Gerekirse videoyu biraz keser ama estetik kalır */
+}
+
+@media (max-width: 768px) {
+    .video_gallery .video_wrapper video {
+        max-width: 90%; /* Küçük ekranlarda genişliği %90 yap */
+        min-width: 250px; /* Minimum genişliği biraz daha küçült */
+        max-height: 300px; /* Maksimum yüksekliği küçült */
+    }
+
+    .video_wrapper {
+        padding: 10px; /* Küçük ekranlarda daha az boşluk bırak */
+    }
+}
+
+
+/* Blog öğesi için stil */
+.blog_item {
+    background-color: #77808a; /* Hafif bir arka plan rengi */
+    border: 1px solid #ddd; /* İnce bir kenarlık */
+    border-radius: 8px; /* Köşeleri yuvarlat */
+    padding: 20px; /* İçerik etrafında boşluk */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif bir gölge */
+    transition: transform 0.5s ease, box-shadow 0.3s ease; /* Hover animasyonu */
+    text-align: center; /* Metni ortala */
+    margin: 40px 20px; /* Üst ve alt boşluk */
+}
+
+.blog_item:hover {
+    transform: translateY(-5px); /* Hover sırasında yukarı kaldır */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Hover sırasında gölgeyi artır */
+}
+
+.blog_title {
+    font-size: 1.8rem; /* Başlık boyutu */
+    color: #232323; /* Başlık rengi */
+    margin-bottom: 10px; /* Alt boşluk */
+    font-weight: bold; /* Kalın yazı */
+}
+
+.blog_desc {
+    font-size: 1.5rem; /* Açıklama boyutu */
+    color: #f1f0f0; /* Açıklama rengi */
+    margin-bottom: 15px; /* Alt boşluk */
+    line-height: 1.6; /* Satır yüksekliği */
+}
+
+.blog_item .button {
+    display: inline-block;
+    padding: 20px 20px; /* Buton iç boşluğu */
+    background-color: #212d37; /* Buton arka plan rengi */
+    color: #fff; /* Buton yazı rengi */
+    text-decoration: none; /* Alt çizgiyi kaldır */
+    border-radius: 5px; /* Köşeleri yuvarlat */
+    transition: background-color 0.3s ease; /* Hover animasyonu */
+}
+
+.blog_item .button:hover {
+    background-color: #6c6c6c; /* Hover sırasında buton rengi */
+}
+
+
+/* Footer için stil */
+.site_footer {
+    background-color: #1C2321; /* Koyu bir arka plan rengi */
+    color: #EEF1EF; /* Yazı rengini açık gri yap */
+    text-align: center; /* Metni ortala */
+    padding: 20px 0; /* Üst ve alt boşluk */
+    font-size: 14px; /* Yazı boyutu */
+    font-weight: 500; /* Yazı kalınlığı */
+    border-top: 1px solid #333; /* Üst kısma ince bir çizgi */
+    margin-top: -60px; /* Footer ile üstteki içerik arasında boşluk */
+}
+
+.site_footer p {
+    margin: 0; /* Varsayılan boşlukları kaldır */
 }

@@ -1,16 +1,6 @@
 
 
 
-// const navToggle = document.querySelector(".nav_toggle"),
-//       navMenu = document.querySelector(".nav_menu");
-
-
-//     // navToggle.addEventListener("click", () => {
-//     //     navMenu.classList.toggle("show-menu");
-//     //     navToggle.classList.toggle("active");
-//     // })
-
-
 
 
     const navToggle = document.querySelector('.nav_toggle');
@@ -21,6 +11,18 @@
         navToggle.classList.toggle('active'); 
 
     });
+
+    // HIDE NAVBAR ON SCROLL
+    // Navigasyon bağlantılarına tıklanınca menüyü kapat
+const navLinks = document.querySelectorAll('.nav_link');
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        if (navMenu.classList.contains('show_menu')) {
+            navMenu.classList.remove('show_menu');
+            navToggle.classList.remove('active');
+        }
+    });
+});
 
     // TYPING TEXT ANIMATION
     var typed = new Typed(".profession_text", {
@@ -55,7 +57,11 @@
             const responseElement = document.getElementById('formResponse');
             if (response.ok) {
                 responseElement.textContent = result.message;
-                responseElement.style.color = 'green';
+                responseElement.style.color = 'white';
+                responseElement.style.fontWeight = 'bold'; 
+                responseElement.style.fontSize = '18px'; // Yazı boyutunu büyüt
+
+
                 form.reset();
             } else {
                 responseElement.textContent = result.error;
