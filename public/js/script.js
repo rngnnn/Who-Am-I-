@@ -13,7 +13,21 @@
     });
 
     // HIDE NAVBAR ON SCROLL
-    // Navigasyon bağlantılarına tıklanınca menüyü kapat
+
+    const header = document.querySelector('.header');
+    const homeSection = document.querySelector('.home');
+    
+    window.addEventListener('scroll', () => {
+        const homeHeight = homeSection.offsetHeight;
+    
+        if (window.scrollY > homeHeight) {
+            header.style.backgroundColor = 'rgba(28, 35, 33, 0.4)'; 
+        } else {
+            header.style.backgroundColor = '#1C2321'; 
+        }
+    });
+
+    
 const navLinks = document.querySelectorAll('.nav_link');
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
@@ -25,6 +39,7 @@ navLinks.forEach(link => {
 });
 
     // TYPING TEXT ANIMATION
+
     var typed = new Typed(".profession_text", {
         strings: ["Web Developer...", "Designer...", "Freelancer...","Coder..."],
         typeSpeed: 100,
@@ -59,7 +74,7 @@ navLinks.forEach(link => {
                 responseElement.textContent = result.message;
                 responseElement.style.color = 'white';
                 responseElement.style.fontWeight = 'bold'; 
-                responseElement.style.fontSize = '18px'; // Yazı boyutunu büyüt
+                responseElement.style.fontSize = '18px'; 
 
 
                 form.reset();
