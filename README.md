@@ -26,7 +26,6 @@ Here is a demo of the project:
 [![Watch the video](https://i.vimeocdn.com/video/1072998860_640.jpg)](https://vimeo.com/1072998860?share=copy)
 
 Or [click here to watch the demo video](https://vimeo.com/1072998860?share=copy).
-
 ---
 
 ## Technologies Used 🛠️
