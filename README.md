@@ -15,8 +15,11 @@ This is a **personal portfolio website** designed to showcase skills, projects, 
 
 ---
 
+## Screenshots 📸
 
+Here is a screenshot of the project:
 
+![Project Screenshot](public/image/Screenshot%202025-04-06%20at%208.33.54%20PM.png)
 ---
 
 ## Demo 🎥
