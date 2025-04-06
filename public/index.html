@@ -485,12 +485,15 @@
                 <div class="contact_form">
                     <h3 class="contact_title">Get in Touch</h3>
                     <p class="contact_subtitle">Feel free to reach out for collaborations or just a friendly chat!</p>
-                    <form id="contactForm" action="/submit-form" method="POST">
+                    
+                    <form id="contactForm" action="/api/submit-form.js" method="POST">
                         <input type="text" class="form_input" name="name" placeholder="Your Name" required>
                         <input type="email" class="form_input" name="email" placeholder="Your Email" required>
                         <textarea class="form_textarea" name="message" placeholder="Your Message" required></textarea>
                         <button type="submit" class="button form_button">Send Message</button>
                     </form>
+
+
                     <p id="formResponse" style="margin-top: 20px; color: #fff;"></p>
                 </div>
             </div>
@@ -541,7 +544,6 @@
 
 
 
-    <script src="https://cdn.tailwindcss.com"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
