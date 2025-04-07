@@ -1,8 +1,20 @@
-// filepath: /Users/rengin/Desktop/who-am-i/api/submit-form.js
-import fs from 'fs';
-import path from 'path';
+import admin from 'firebase-admin';
 
-export default function handler(req, res) {
+// Firebase Admin SDK yapılandırması
+if (!admin.apps.length) {
+  admin.initializeApp({
+    credential: admin.credential.cert({
+      projectId: "who-am-i-8f278",
+      clientEmail: "firebase-adminsdk-fbsvc@who-am-i-8f278.iam.gserviceaccount.com",
+      privateKey: "-----BEGIN PRIVATE KEY-----\nYOUR_PRIVATE_KEY_HERE\n-----END PRIVATE KEY-----".replace(/\\n/g, '\n'),
+    }),
+    databaseURL: "https://who-am-i-8f278.firebaseio.com",
+  });
+}
+
+const db = admin.firestore();
+
+export default async function handler(req, res) {
   if (req.method === 'POST') {
     const { name, email, message } = req.body;
 
@@ -10,27 +22,33 @@ export default function handler(req, res) {
       return res.status(400).json({ error: 'All fields are required.' });
     }
 
-    const submissionsPath = path.join(process.cwd(), 'data', 'submissions.json');
-    const newSubmission = { name, email, message, date: new Date() };
-
-    // Save to JSON file
-    fs.readFile(submissionsPath, 'utf8', (err, data) => {
-      if (err && err.code !== 'ENOENT') {
-        return res.status(500).json({ error: 'Failed to read submissions file.' });
-      }
-
-      const submissions = data ? JSON.parse(data) : [];
-      submissions.push(newSubmission);
-
-      fs.writeFile(submissionsPath, JSON.stringify(submissions, null, 2), (err) => {
-        if (err) {
-          return res.status(500).json({ error: 'Failed to save submission.' });
-        }
-
-        res.status(200).json({ message: 'Form submitted successfully!' });
+    try {
+      // Firestore'a veri yazma
+      await db.collection('submissions').add({
+        name,
+        email,
+        message,
+        date: new Date(),
       });
-    });
+      return res.status(200).json({ message: 'Form submitted successfully!' });
+    } catch (error) {
+      console.error('Error saving submission:', error);
+      return res.status(500).json({ error: 'Failed to save submission.' });
+    }
+  } else if (req.method === 'GET') {
+    try {
+      // Firestore'dan veri okuma
+      const submissions = [];
+      const querySnapshot = await db.collection('submissions').get();
+      querySnapshot.forEach((doc) => {
+        submissions.push({ id: doc.id, ...doc.data() });
+      });
+      return res.status(200).json(submissions);
+    } catch (error) {
+      console.error('Error fetching submissions:', error);
+      return res.status(500).json({ error: 'Failed to fetch submissions.' });
+    }
   } else {
-    res.status(405).json({ error: 'Method not allowed' });
+    return res.status(405).json({ error: 'Method Not Allowed' });
   }
 }
